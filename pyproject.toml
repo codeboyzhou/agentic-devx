@@ -1,0 +1,28 @@
+[project]
+name = "agentic-devx"
+description = "Agentic-DevX: From Language to Action, Empowering Developers with AI Agents."
+requires-python = ">=3.12"
+readme = "README.md"
+version = "0.1.0"
+dependencies = [
+    "google-adk>=1.13.0",
+    "litellm>=1.76.0",
+    "loguru>=0.7.3",
+    "pydantic>=2.11.7",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+    "pyright>=1.1.404",
+    "ruff>=0.12.10",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["README.md"]
+
+[tool.ruff.lint]
+select = ["C4", "E", "F", "I", "PERF", "UP"]
+ignore = ["PERF203"]
