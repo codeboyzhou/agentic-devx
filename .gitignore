@@ -1,8 +1,16 @@
 # PyCharm files
 .idea/
 
-# Python files
+# Python cache files
 __pycache__/
+
+# Python build files
+*.egg-info/
+
+# pytest files
+pytest/
+htmlcov/
+.coverage
 
 # Environment variables
 .env

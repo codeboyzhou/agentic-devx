@@ -15,7 +15,10 @@ dependencies = [
 dev = [
     "pre-commit>=4.3.0",
     "pyright>=1.1.404",
-    "ruff>=0.12.10",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+    "pytest-html>=4.1.1",
+    "ruff>=0.12.11",
 ]
 
 [tool.ruff]
@@ -26,3 +29,7 @@ extend-exclude = ["README.md"]
 [tool.ruff.lint]
 select = ["C4", "E", "F", "I", "PERF", "UP"]
 ignore = ["PERF203"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=adx --cov-report=term --cov-report=html --html=pytest/report.html"
